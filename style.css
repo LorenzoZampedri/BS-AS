@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(90deg, #faf2af, #867a08);
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+main {
+    background: radial-gradient(circle, white, #f5deb3);
+    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input, textarea, button {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    background: linear-gradient(180deg, #555555, #333333);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: static;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+    height: 460px;
+    box-sizing: border-box; 
+}
+
+
+.card form {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.card input[type="number"] {
+    width: 50%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card button {
+    padding: 0.5rem;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background-color: #e5b700;
+}
+
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.reseñas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+
+#inicio {
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+}
+
+
+#inicio img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover; 
+    display: block;
+}
+
+
+#quienes-somos {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem 1rem; 
+}
+
+#quienes-somos img {
+    width: 100%;
+    max-height: 400px;
+    height: auto; 
+    object-fit: cover;
+    display: block; 
+    margin: 0 auto; 
+    
+}
+
+.imagen-container {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+
+.imagen-principal {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+
+.imagen-secundaria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.imagen-container:hover .imagen-principal {
+    opacity: 0;
+}
+
+.imagen-container:hover .imagen-secundaria {
+    opacity: 1;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .productos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
